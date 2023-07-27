@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="codeAPP.paginas.login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame Padding="16" CornerRadius="0">
+                <Label Text="Examen: Parcial 1" HorizontalTextAlignment="Center" TextColor="Gray" FontSize="24"/>
+            </Frame>
+            <Frame>
+                <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"></Image>
+            </Frame>
+            <Frame>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!-- CAMPOS DE USUARIO -->
+                    <Label Text="USUARIO:" Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center"></Label>
+                    <Entry x:Name="txtUser" Placeholder="Usuario" Grid.Column="1" Grid.Row="0"></Entry>
+                    <!-- CAMPOS DE CONTRASEÑA -->
+                    <Label Text="CONTRASEÑA:" Grid.Column="0" Grid.Row="1" VerticalTextAlignment="Center"></Label>
+                    <Entry  x:Name="txtPass" IsPassword="True" Placeholder="*******" Grid.Column="1" Grid.Row="1"></Entry>
+
+                </Grid>
+            </Frame>
+
+            <Frame>
+                <!-- BOTON DE INICIO DE SESION -->
+                <Button x:Name="btnInicio" BackgroundColor="DarkGray" Text="INICIAR SESION" Clicked="btnInicio_Clicked"></Button>
+            </Frame>
+            <Frame>
+                <!-- BOTON DE INICIO DE SESION -->
+                <Button x:Name="btnRegistro" BackgroundColor="DarkGray" Text="Registro" Clicked="btnRegistro_Clicked"></Button>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
